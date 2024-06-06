@@ -49,6 +49,10 @@ static void Switch_IsSwitch2Press()
 	/* Check if switch 2 is pressed */
 }
 
+static void test_git()
+{
+	/* Do nothing */
+}
 
 /*******************************************************************************
  * Code
