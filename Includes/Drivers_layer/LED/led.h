@@ -20,11 +20,6 @@
 /*******************************************************************************
  * Definition
  ******************************************************************************/
-//#define RED_LED_PIN_MASK (1<<29)
-//#define GREEN_LED_PIN_MASK (1<<5)
-//#define RED_LED_PIN (29)
-//#define GREEN_LED_PIN (5)
-
 typedef struct
 {
 	PORT_Type *port;
