@@ -21,7 +21,7 @@
  */
 void Switch_Init(void)
 {
-	HAL_ClockSetup();
+	HAL_PORT_EnableClock(PORTC);
 
 	/* Enable GPIO for PORTC pin 3 (switch 1)  */
 	HAL_GPIO_EnablePinSwitch(PORTC, SW1_PIN);

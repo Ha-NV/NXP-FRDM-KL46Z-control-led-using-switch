@@ -19,6 +19,6 @@
 /*******************************************************************************
  * Prototype
  ******************************************************************************/
-void HAL_ClockSetup(void);
+void HAL_PORT_EnableClock(PORT_Type *port);
 
 #endif /* INCLUDES_HAL_LAYER_HAL_CLOCK_H_ */

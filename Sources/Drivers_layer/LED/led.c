@@ -21,7 +21,8 @@
  */
 void LED_Init(void)
 {
-	HAL_ClockSetup();
+	HAL_PORT_EnableClock(PORTE);
+	HAL_PORT_EnableClock(PORTD);
 
 	/* Enable GPIO for PORTE pin 29 (red led) */
 	HAL_GPIO_EnablePinLED(PORTE, RED_LED_PIN);

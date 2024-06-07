@@ -19,32 +19,32 @@
  */
 static void APP_Delay_ms(uint32_t ms);
 
-static void LED_RedOn()
+static void _LED_RedOn(void)
 {
 	/* Call functions to turn on Red led */
 }
 
-static void LED_RedOff()
+static void _LED_RedOff(void)
 {
 	/* Call function to turn off Green led */
 }
 
-static void LED_GreenOn()
+static void _LED_GreenOn(void)
 {
 	/* Call function to turn on Green led */
 }
 
-static void LED_GreenOff()
+static void _LED_GreenOff(void)
 {
 	/* Call function to turn off Green led */
 }
 
-static void Switch_IsSwitch1Pressed()
+static void _Switch_IsSwitch1Pressed(void)
 {
 	/* Check if switch 1 is pressed */
 }
 
-static void Switch_IsSwitch2Press()
+static void _Switch_IsSwitch2Press(void)
 {
 	/* Check if switch 2 is pressed */
 }
