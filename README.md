@@ -3,5 +3,6 @@
 The assignment includes the following requirements:
 * Press and hold switch 1 to turn the red LED on and off with a 2s cycle.
 * Press and hold switch 2 to turn the red LED on and off with a 4s cycle.
+* The project must comply with CMSIS standards (have HAL layer, Driver layer, Application layer).
 ## Video demo
 https://github.com/Ha-NV/blink-led-CMSIS/assets/96341237/a043c6ef-0f5d-4ea9-a1d8-2dfe45719a86
