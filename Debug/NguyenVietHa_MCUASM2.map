@@ -35,17 +35,6 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
  .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
  .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
- .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
  .text          0x00000000        0x0 ./Sources/HAL_layer/hal_clock.o
  .data          0x00000000        0x0 ./Sources/HAL_layer/hal_clock.o
  .bss           0x00000000        0x0 ./Sources/HAL_layer/hal_clock.o
@@ -607,25 +596,25 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
 OUTPUT(NguyenVietHa_MCUASM2.elf elf32-littlearm)
 
-.debug_info     0x00000000     0x1300
- .debug_info    0x00000000      0x339 ./Sources/HAL_layer/hal_clock.o
- .debug_info    0x00000339      0x2f7 ./Sources/HAL_layer/hal_gpio.o
- .debug_info    0x00000630      0x219 ./Sources/Drivers_layer/Switch/switch.o
- .debug_info    0x00000849      0x247 ./Sources/Drivers_layer/LED/led.o
- .debug_info    0x00000a90      0x36b ./Sources/Application_layer/app.o
- .debug_info    0x00000dfb       0x8c ./Sources/main.o
- .debug_info    0x00000e87       0x8b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_info    0x00000f12      0x3ee ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_info     0x00000000     0x12fa
+ .debug_info    0x00000000      0x332 ./Sources/HAL_layer/hal_clock.o
+ .debug_info    0x00000332      0x2f7 ./Sources/HAL_layer/hal_gpio.o
+ .debug_info    0x00000629      0x219 ./Sources/Drivers_layer/Switch/switch.o
+ .debug_info    0x00000842      0x247 ./Sources/Drivers_layer/LED/led.o
+ .debug_info    0x00000a89      0x36c ./Sources/Application_layer/app.o
+ .debug_info    0x00000df5       0x8c ./Sources/main.o
+ .debug_info    0x00000e81       0x8b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_info    0x00000f0c      0x3ee ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_abbrev   0x00000000      0x663
+.debug_abbrev   0x00000000      0x672
  .debug_abbrev  0x00000000       0xe9 ./Sources/HAL_layer/hal_clock.o
  .debug_abbrev  0x000000e9       0xed ./Sources/HAL_layer/hal_gpio.o
  .debug_abbrev  0x000001d6       0xed ./Sources/Drivers_layer/Switch/switch.o
  .debug_abbrev  0x000002c3       0xeb ./Sources/Drivers_layer/LED/led.o
- .debug_abbrev  0x000003ae      0x151 ./Sources/Application_layer/app.o
- .debug_abbrev  0x000004ff       0x47 ./Sources/main.o
- .debug_abbrev  0x00000546       0x14 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_abbrev  0x0000055a      0x109 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_abbrev  0x000003ae      0x160 ./Sources/Application_layer/app.o
+ .debug_abbrev  0x0000050e       0x47 ./Sources/main.o
+ .debug_abbrev  0x00000555       0x14 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_abbrev  0x00000569      0x109 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
 .debug_aranges  0x00000000      0x1b0
  .debug_aranges
@@ -654,62 +643,51 @@ OUTPUT(NguyenVietHa_MCUASM2.elf elf32-littlearm)
  .debug_ranges  0x000000f8       0x10 ./Sources/main.o
  .debug_ranges  0x00000108       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_macro    0x00000000     0xecac
- .debug_macro   0x00000000      0x135 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000135      0x802 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000937       0x16 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000094d       0x16 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000963       0x44 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x000009a7      0x209 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000bb0       0x3a ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000bea       0x3a ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000c24       0x26 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000c4a      0x306 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000f50       0x6b ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000fbb     0xd132 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e0ed       0x58 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e145       0x35 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e17a       0xa3 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e21d      0x166 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e383       0x52 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e3d5       0x16 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e3eb       0x43 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e42e      0x180 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e5ae      0x2a6 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e854       0x10 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e864       0x35 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e899       0x8d ./Sources/HAL_layer/hal_gpio.o
- .debug_macro   0x0000e926       0xa5 ./Sources/Drivers_layer/Switch/switch.o
- .debug_macro   0x0000e9cb       0xa5 ./Sources/Drivers_layer/LED/led.o
- .debug_macro   0x0000ea70       0xb9 ./Sources/Application_layer/app.o
- .debug_macro   0x0000eb29       0xb9 ./Sources/main.o
- .debug_macro   0x0000ebe2       0x7e ./Project_Settings/Startup_Code/system_MKL46Z4.o
- .debug_macro   0x0000ec60       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_macro    0x00000000     0xe458
+ .debug_macro   0x00000000       0x8d ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000008d      0x802 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000088f       0x16 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x000008a5       0x16 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x000008bb       0x44 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x000008ff      0x209 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000b08       0x3a ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000b42       0x3a ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000b7c       0x26 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000ba2      0x306 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000ea8       0x6b ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000f13     0xd132 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e045       0x8d ./Sources/HAL_layer/hal_gpio.o
+ .debug_macro   0x0000e0d2       0xa5 ./Sources/Drivers_layer/Switch/switch.o
+ .debug_macro   0x0000e177       0xa5 ./Sources/Drivers_layer/LED/led.o
+ .debug_macro   0x0000e21c       0xb9 ./Sources/Application_layer/app.o
+ .debug_macro   0x0000e2d5       0xb9 ./Sources/main.o
+ .debug_macro   0x0000e38e       0x7e ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_macro   0x0000e40c       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_line     0x00000000     0x12f6
- .debug_line    0x00000000      0x2e7 ./Sources/HAL_layer/hal_clock.o
- .debug_line    0x000002e7      0x272 ./Sources/HAL_layer/hal_gpio.o
- .debug_line    0x00000559      0x25e ./Sources/Drivers_layer/Switch/switch.o
- .debug_line    0x000007b7      0x263 ./Sources/Drivers_layer/LED/led.o
- .debug_line    0x00000a1a      0x396 ./Sources/Application_layer/app.o
- .debug_line    0x00000db0      0x28b ./Sources/main.o
- .debug_line    0x0000103b       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_line    0x000010b6      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_line     0x00000000     0x121f
+ .debug_line    0x00000000      0x210 ./Sources/HAL_layer/hal_clock.o
+ .debug_line    0x00000210      0x272 ./Sources/HAL_layer/hal_gpio.o
+ .debug_line    0x00000482      0x25e ./Sources/Drivers_layer/Switch/switch.o
+ .debug_line    0x000006e0      0x263 ./Sources/Drivers_layer/LED/led.o
+ .debug_line    0x00000943      0x396 ./Sources/Application_layer/app.o
+ .debug_line    0x00000cd9      0x28b ./Sources/main.o
+ .debug_line    0x00000f64       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_line    0x00000fdf      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_str      0x00000000    0x518ed
- .debug_str     0x00000000    0x51555 ./Sources/HAL_layer/hal_clock.o
-                              0x519df (size before relaxing)
- .debug_str     0x00051555      0x105 ./Sources/HAL_layer/hal_gpio.o
-                              0x4f4f1 (size before relaxing)
- .debug_str     0x0005165a       0x7b ./Sources/Drivers_layer/Switch/switch.o
+.debug_str      0x00000000    0x4f497
+ .debug_str     0x00000000    0x4f109 ./Sources/HAL_layer/hal_clock.o
+                              0x4f50e (size before relaxing)
+ .debug_str     0x0004f109      0x101 ./Sources/HAL_layer/hal_gpio.o
+                              0x4f4ed (size before relaxing)
+ .debug_str     0x0004f20a       0x75 ./Sources/Drivers_layer/Switch/switch.o
                               0x4f4d3 (size before relaxing)
- .debug_str     0x000516d5       0x5e ./Sources/Drivers_layer/LED/led.o
+ .debug_str     0x0004f27f       0x5e ./Sources/Drivers_layer/LED/led.o
                               0x4f4c2 (size before relaxing)
- .debug_str     0x00051733      0x10c ./Sources/Application_layer/app.o
+ .debug_str     0x0004f2dd      0x10c ./Sources/Application_layer/app.o
                               0x4f5b5 (size before relaxing)
- .debug_str     0x0005183f       0x17 ./Sources/main.o
+ .debug_str     0x0004f3e9       0x17 ./Sources/main.o
                               0x4f462 (size before relaxing)
- .debug_str     0x00051856       0x97 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_str     0x0004f400       0x97 ./Project_Settings/Startup_Code/system_MKL46Z4.o
                               0x4f537 (size before relaxing)
 
 .comment        0x00000000       0x70

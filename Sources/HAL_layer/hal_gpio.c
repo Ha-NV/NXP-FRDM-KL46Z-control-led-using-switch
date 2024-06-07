@@ -49,12 +49,12 @@ void HAL_GPIO_SetMuxPinSwitch(PORT_Type *port, uint32_t pin)
  *
  * This function sets a specific pin on a given GPIO port as an output by configuring the corresponding bit in the Port Data Direction Register (PDDR).
  *
- * @param GPIO_port Pointer to the GPIO_Type structure that contains the GPIO port registers.
+ * @param GPIOx Pointer to the GPIO_Type structure that contains the GPIO port registers.
  * @param pinMask The mask representing the pin(s) to be set as output.
  */
-void HAL_GPIO_SetAsOutput(GPIO_Type *GPIO_port, uint32_t pinMask)
+void HAL_GPIO_SetAsOutput(GPIO_Type *GPIOx, uint32_t pinMask)
 {
-	GPIO_port->PDDR |= pinMask;
+	GPIOx->PDDR |= pinMask;
 }
 
 /**
@@ -62,12 +62,12 @@ void HAL_GPIO_SetAsOutput(GPIO_Type *GPIO_port, uint32_t pinMask)
  *
  * This function sets a specific pin on a given GPIO port as an input by clearing the corresponding bit in the Port Data Direction Register (PDDR).
  *
- * @param GPIO_port Pointer to the GPIO_Type structure that contains the GPIO port registers.
+ * @param GPIOx Pointer to the GPIO_Type structure that contains the GPIO port registers.
  * @param pinMask The mask representing the pin(s) to be set as input.
  */
-void HAL_GPIO_SetAsInput(GPIO_Type *GPIO_port, uint32_t pinMask)
+void HAL_GPIO_SetAsInput(GPIO_Type *GPIOx, uint32_t pinMask)
 {
-	GPIO_port->PDDR &= ~pinMask;
+	GPIOx->PDDR &= ~pinMask;
 }
 
 /**
@@ -75,12 +75,12 @@ void HAL_GPIO_SetAsInput(GPIO_Type *GPIO_port, uint32_t pinMask)
  *
  * This function sets the specified pin(s) on a given GPIO port by setting the corresponding bits in the Port Set Output Register (PSOR).
  *
- * @param GPIO_port Pointer to the GPIO_Type structure that contains the GPIO port registers.
+ * @param GPIOx Pointer to the GPIO_Type structure that contains the GPIO port registers.
  * @param pinMask The mask representing the pin(s) to be set.
  */
-void HAL_GPIO_SetPin(GPIO_Type *GPIO_port, uint32_t pinMask)
+void HAL_GPIO_SetPin(GPIO_Type *GPIOx, uint32_t pinMask)
 {
-	GPIO_port->PSOR |= pinMask;
+	GPIOx->PSOR |= pinMask;
 }
 
 /**
@@ -88,12 +88,12 @@ void HAL_GPIO_SetPin(GPIO_Type *GPIO_port, uint32_t pinMask)
  *
  * This function clears the specified pin(s) on a given GPIO port by setting the corresponding bits in the Port Clear Output Register (PCOR).
  *
- * @param GPIO_port Pointer to the GPIO_Type structure that contains the GPIO port registers.
+ * @param GPIOx Pointer to the GPIO_Type structure that contains the GPIO port registers.
  * @param pinMask The mask representing the pin(s) to be cleared.
  */
-void HAL_GPIO_ClearPin(GPIO_Type *GPIO_port, uint32_t pinMask)
+void HAL_GPIO_ClearPin(GPIO_Type *GPIOx, uint32_t pinMask)
 {
-	GPIO_port->PCOR |= pinMask;
+	GPIOx->PCOR |= pinMask;
 }
 
 /**
@@ -101,11 +101,11 @@ void HAL_GPIO_ClearPin(GPIO_Type *GPIO_port, uint32_t pinMask)
  *
  * This function reads the value of the specified pin on a given GPIO port by masking the Port Data Input Register (PDIR).
  *
- * @param GPIO_port Pointer to the GPIO_Type structure that contains the GPIO port registers.
+ * @param GPIOx Pointer to the GPIO_Type structure that contains the GPIO port registers.
  * @param pinMask The mask representing the pin(s) to be read.
  * @return The value of the specified pin.
  */
-uint32_t HAL_GPIO_ReadPin(GPIO_Type *GPIO_port, uint32_t pinMask)
+uint32_t HAL_GPIO_ReadPin(GPIO_Type *GPIOx, uint32_t pinMask)
 {
-	return GPIO_port->PDIR & pinMask;
+	return GPIOx->PDIR & pinMask;
 } /* EOF */
