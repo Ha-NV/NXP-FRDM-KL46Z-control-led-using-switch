@@ -6,20 +6,33 @@
  */
 
 # include "..\Includes\HAL_layer\hal_clock.h"
+# include <string.h>
 
 /**
- * @brief Setup clock for PORTC, PORTD, and PORTE.
+ * @brief Setup clock for PORTx.
  *
- * This function enables the clock for PORTC, PORTD, and PORTE.
+ * This function enables the clock for PORTx.
  */
-void HAL_ClockSetup(void)
+void HAL_PORT_EnableClock(PORT_Type *port)
 {
-	/* Enable clock for PORTC */
-	SIM->SCGC5 |= 1<<11;
-
-	/* Enable clock for PORTD */
-	SIM->SCGC5 |= 1<<12;
-
-	/* Enable clock for PORTE */
-	SIM->SCGC5 |= 1<<13;
+	if (port == PORTA)
+	{
+		SIM->SCGC5 |= SIM_SCGC5_PORTA_MASK;
+	}
+	else if (port == PORTB)
+	{
+		SIM->SCGC5 |= SIM_SCGC5_PORTB_MASK;
+	}
+	else if (port == PORTC)
+	{
+		SIM->SCGC5 |= SIM_SCGC5_PORTC_MASK;
+	}
+	else if (port == PORTD)
+	{
+		SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK;
+	}
+	else if (port == PORTE)
+	{
+		SIM->SCGC5 |= SIM_SCGC5_PORTE_MASK;
+	}
 } /* EOF */

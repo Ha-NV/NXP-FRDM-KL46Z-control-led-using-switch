@@ -22,7 +22,7 @@
  * @param port Pointer to the PORT_Type structure that contains the port registers.
  * @param pin The pin number to be configured.
  */
-void HAL_GPIO_EnablePinLED(PORT_Type *port, uint32_t pin)
+void HAL_GPIO_SetMuxPinLED(PORT_Type *port, uint32_t pin)
 {
 	port->PCR[pin] = PORT_PCR_MUX(1);
 }
@@ -37,7 +37,7 @@ void HAL_GPIO_EnablePinLED(PORT_Type *port, uint32_t pin)
  * @param port Pointer to the PORT_Type structure that contains the port registers.
  * @param pin The pin number to be configured.
  */
-void HAL_GPIO_EnablePinSwitch(PORT_Type *port, uint32_t pin)
+void HAL_GPIO_SetMuxPinSwitch(PORT_Type *port, uint32_t pin)
 {
     port->PCR[pin] |= PORT_PCR_MUX(1);
     port->PCR[pin] |= PORT_PCR_PE_MASK;

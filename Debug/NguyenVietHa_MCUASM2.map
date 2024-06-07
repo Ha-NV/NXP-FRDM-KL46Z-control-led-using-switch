@@ -35,6 +35,17 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
  .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
  .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
+ .group         0x00000000        0x8 ./Sources/HAL_layer/hal_clock.o
  .text          0x00000000        0x0 ./Sources/HAL_layer/hal_clock.o
  .data          0x00000000        0x0 ./Sources/HAL_layer/hal_clock.o
  .bss           0x00000000        0x0 ./Sources/HAL_layer/hal_clock.o
@@ -74,7 +85,6 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/Drivers_layer/Switch/switch.o
  .group         0x00000000        0x8 ./Sources/Drivers_layer/Switch/switch.o
  .group         0x00000000        0x8 ./Sources/Drivers_layer/Switch/switch.o
- .group         0x00000000        0x8 ./Sources/Drivers_layer/Switch/switch.o
  .text          0x00000000        0x0 ./Sources/Drivers_layer/Switch/switch.o
  .data          0x00000000        0x0 ./Sources/Drivers_layer/Switch/switch.o
  .bss           0x00000000        0x0 ./Sources/Drivers_layer/Switch/switch.o
@@ -89,7 +99,6 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/Drivers_layer/Switch/switch.o
  .debug_macro   0x00000000       0x6b ./Sources/Drivers_layer/Switch/switch.o
  .debug_macro   0x00000000     0xd132 ./Sources/Drivers_layer/Switch/switch.o
- .group         0x00000000        0x8 ./Sources/Drivers_layer/LED/led.o
  .group         0x00000000        0x8 ./Sources/Drivers_layer/LED/led.o
  .group         0x00000000        0x8 ./Sources/Drivers_layer/LED/led.o
  .group         0x00000000        0x8 ./Sources/Drivers_layer/LED/led.o
@@ -126,8 +135,6 @@ Discarded input sections
  .group         0x00000000        0x8 ./Sources/Application_layer/app.o
  .group         0x00000000        0x8 ./Sources/Application_layer/app.o
  .group         0x00000000        0x8 ./Sources/Application_layer/app.o
- .group         0x00000000        0x8 ./Sources/Application_layer/app.o
- .group         0x00000000        0x8 ./Sources/Application_layer/app.o
  .text          0x00000000        0x0 ./Sources/Application_layer/app.o
  .data          0x00000000        0x0 ./Sources/Application_layer/app.o
  .bss           0x00000000        0x0 ./Sources/Application_layer/app.o
@@ -142,9 +149,6 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/Application_layer/app.o
  .debug_macro   0x00000000       0x6b ./Sources/Application_layer/app.o
  .debug_macro   0x00000000     0xd132 ./Sources/Application_layer/app.o
- .debug_macro   0x00000000       0x1c ./Sources/Application_layer/app.o
- .group         0x00000000        0x8 ./Sources/main.o
- .group         0x00000000        0x8 ./Sources/main.o
  .group         0x00000000        0x8 ./Sources/main.o
  .group         0x00000000        0x8 ./Sources/main.o
  .group         0x00000000        0x8 ./Sources/main.o
@@ -170,8 +174,6 @@ Discarded input sections
  .debug_macro   0x00000000      0x306 ./Sources/main.o
  .debug_macro   0x00000000       0x6b ./Sources/main.o
  .debug_macro   0x00000000     0xd132 ./Sources/main.o
- .debug_macro   0x00000000       0x1c ./Sources/main.o
- .debug_macro   0x00000000       0x22 ./Sources/main.o
  .data          0x00000000        0x0 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
  .bss           0x00000000        0x0 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
  .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MKL46Z4.o
@@ -294,7 +296,7 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
  .FlashConfig   0x00000400       0x10 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
                 0x00000410                . = ALIGN (0x4)
 
-.text           0x00000410      0x504
+.text           0x00000410      0x63c
                 0x00000410                . = ALIGN (0x4)
  *(.text)
  .text          0x00000410       0x60 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
@@ -342,158 +344,167 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
                 0x00000514                CMP0_IRQHandler
                 0x00000514                DMA1_IRQHandler
  *(.text*)
- .text.HAL_ClockSetup
-                0x0000051c       0x48 ./Sources/HAL_layer/hal_clock.o
-                0x0000051c                HAL_ClockSetup
- .text.HAL_GPIO_EnablePinLED
-                0x00000564       0x1c ./Sources/HAL_layer/hal_gpio.o
-                0x00000564                HAL_GPIO_EnablePinLED
- .text.HAL_GPIO_EnablePinSwitch
-                0x00000580       0x54 ./Sources/HAL_layer/hal_gpio.o
-                0x00000580                HAL_GPIO_EnablePinSwitch
+ .text.HAL_PORT_EnableClock
+                0x0000051c       0xb4 ./Sources/HAL_layer/hal_clock.o
+                0x0000051c                HAL_PORT_EnableClock
+ .text.HAL_GPIO_SetMuxPinLED
+                0x000005d0       0x1c ./Sources/HAL_layer/hal_gpio.o
+                0x000005d0                HAL_GPIO_SetMuxPinLED
+ .text.HAL_GPIO_SetMuxPinSwitch
+                0x000005ec       0x54 ./Sources/HAL_layer/hal_gpio.o
+                0x000005ec                HAL_GPIO_SetMuxPinSwitch
  .text.HAL_GPIO_SetAsOutput
-                0x000005d4       0x1c ./Sources/HAL_layer/hal_gpio.o
-                0x000005d4                HAL_GPIO_SetAsOutput
+                0x00000640       0x1c ./Sources/HAL_layer/hal_gpio.o
+                0x00000640                HAL_GPIO_SetAsOutput
  .text.HAL_GPIO_SetAsInput
-                0x000005f0       0x20 ./Sources/HAL_layer/hal_gpio.o
-                0x000005f0                HAL_GPIO_SetAsInput
+                0x0000065c       0x20 ./Sources/HAL_layer/hal_gpio.o
+                0x0000065c                HAL_GPIO_SetAsInput
  .text.HAL_GPIO_SetPin
-                0x00000610       0x1c ./Sources/HAL_layer/hal_gpio.o
-                0x00000610                HAL_GPIO_SetPin
+                0x0000067c       0x1c ./Sources/HAL_layer/hal_gpio.o
+                0x0000067c                HAL_GPIO_SetPin
  .text.HAL_GPIO_ClearPin
-                0x0000062c       0x1c ./Sources/HAL_layer/hal_gpio.o
-                0x0000062c                HAL_GPIO_ClearPin
+                0x00000698       0x1c ./Sources/HAL_layer/hal_gpio.o
+                0x00000698                HAL_GPIO_ClearPin
  .text.HAL_GPIO_ReadPin
-                0x00000648       0x1c ./Sources/HAL_layer/hal_gpio.o
-                0x00000648                HAL_GPIO_ReadPin
- .text.Switch_Init
-                0x00000664       0x40 ./Sources/Drivers_layer/Switch/switch.o
-                0x00000664                Switch_Init
- .text.Switch_IsSw1Pressed
-                0x000006a4       0x20 ./Sources/Drivers_layer/Switch/switch.o
-                0x000006a4                Switch_IsSw1Pressed
- .text.Switch_IsSw2Pressed
-                0x000006c4       0x24 ./Sources/Drivers_layer/Switch/switch.o
-                0x000006c4                Switch_IsSw2Pressed
+                0x000006b4       0x1c ./Sources/HAL_layer/hal_gpio.o
+                0x000006b4                HAL_GPIO_ReadPin
+ .text.SWITCH_Init
+                0x000006d0       0x34 ./Sources/Drivers_layer/Switch/switch.o
+                0x000006d0                SWITCH_Init
+ .text.SWITCH_isPressed
+                0x00000704       0x28 ./Sources/Drivers_layer/Switch/switch.o
+                0x00000704                SWITCH_isPressed
  .text.LED_Init
-                0x000006e8       0x48 ./Sources/Drivers_layer/LED/led.o
-                0x000006e8                LED_Init
- .text.LED_RedOn
-                0x00000730       0x1c ./Sources/Drivers_layer/LED/led.o
-                0x00000730                LED_RedOn
- .text.LED_RedOff
-                0x0000074c       0x1c ./Sources/Drivers_layer/LED/led.o
-                0x0000074c                LED_RedOff
- .text.LED_GreenOn
-                0x00000768       0x18 ./Sources/Drivers_layer/LED/led.o
-                0x00000768                LED_GreenOn
- .text.LED_GreenOff
-                0x00000780       0x18 ./Sources/Drivers_layer/LED/led.o
-                0x00000780                LED_GreenOff
+                0x0000072c       0x34 ./Sources/Drivers_layer/LED/led.o
+                0x0000072c                LED_Init
+ .text.LED_On   0x00000760       0x1c ./Sources/Drivers_layer/LED/led.o
+                0x00000760                LED_On
+ .text.LED_Off  0x0000077c       0x1c ./Sources/Drivers_layer/LED/led.o
+                0x0000077c                LED_Off
  .text.APP_Init
-                0x00000798       0x10 ./Sources/Application_layer/app.o
+                0x00000798       0x18 ./Sources/Application_layer/app.o
                 0x00000798                APP_Init
- .text.APP_Run  0x000007a8       0x60 ./Sources/Application_layer/app.o
-                0x000007a8                APP_Run
- .text.APP_Delay_ms
-                0x00000808       0x38 ./Sources/Application_layer/app.o
- .text.main     0x00000840       0x10 ./Sources/main.o
-                0x00000840                main
+ .text.APP_Run  0x000007b0       0x60 ./Sources/Application_layer/app.o
+                0x000007b0                APP_Run
+ .text.LED_RedInit
+                0x00000810       0x20 ./Sources/Application_layer/app.o
+ .text.LED_GreenInit
+                0x00000830       0x20 ./Sources/Application_layer/app.o
+ .text.LED_RedOn
+                0x00000850       0x1c ./Sources/Application_layer/app.o
+ .text.LED_RedOff
+                0x0000086c       0x1c ./Sources/Application_layer/app.o
+ .text.LED_GreenOn
+                0x00000888       0x1c ./Sources/Application_layer/app.o
+ .text.LED_GreenOff
+                0x000008a4       0x1c ./Sources/Application_layer/app.o
+ .text.SW1_Init
+                0x000008c0       0x20 ./Sources/Application_layer/app.o
+ .text.SW2_Init
+                0x000008e0       0x20 ./Sources/Application_layer/app.o
+ .text.isSW1_Pressed
+                0x00000900       0x20 ./Sources/Application_layer/app.o
+ .text.isSW2_Pressed
+                0x00000920       0x20 ./Sources/Application_layer/app.o
+ .text.APP_Delay
+                0x00000940       0x38 ./Sources/Application_layer/app.o
+ .text.main     0x00000978       0x10 ./Sources/main.o
+                0x00000978                main
  .text.SystemInit
-                0x00000850       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
-                0x00000850                SystemInit
- .text.exit     0x00000868       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
-                0x00000868                exit
+                0x00000988       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+                0x00000988                SystemInit
+ .text.exit     0x000009a0       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+                0x000009a0                exit
  .text.__libc_init_array
-                0x00000894       0x4c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
-                0x00000894                __libc_init_array
- .text.memset   0x000008e0       0x10 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
-                0x000008e0                memset
- .text._exit    0x000008f0        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
-                0x000008f0                _exit
+                0x000009cc       0x4c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+                0x000009cc                __libc_init_array
+ .text.memset   0x00000a18       0x10 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+                0x00000a18                memset
+ .text._exit    0x00000a28        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
+                0x00000a28                _exit
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x000008f4        0x2 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
- *fill*         0x000008f6        0x2 
+                0x00000a2c        0x2 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+ *fill*         0x00000a2e        0x2 
  .rodata._global_impure_ptr
-                0x000008f8        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
-                0x000008f8                _global_impure_ptr
+                0x00000a30        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+                0x00000a30                _global_impure_ptr
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x000008fc        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .eh_frame      0x00000a34        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
  *(.init)
- .init          0x000008fc        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x000008fc                _init
- .init          0x00000900        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+ .init          0x00000a34        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x00000a34                _init
+ .init          0x00000a38        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
  *(.fini)
- .fini          0x00000908        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
-                0x00000908                _fini
- .fini          0x0000090c        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
-                0x00000914                . = ALIGN (0x4)
+ .fini          0x00000a40        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crti.o
+                0x00000a40                _fini
+ .fini          0x00000a44        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtn.o
+                0x00000a4c                . = ALIGN (0x4)
 
-.vfp11_veneer   0x00000914        0x0
+.vfp11_veneer   0x00000a4c        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00000914        0x0
+.v4_bx          0x00000a4c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00000914        0x0
+.iplt           0x00000a4c        0x0
  .iplt          0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x00000914        0x8
-                0x00000914                __exidx_start = .
+.ARM            0x00000a4c        0x8
+                0x00000a4c                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x00000914        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o
-                0x0000091c                __exidx_end = .
+ .ARM.exidx     0x00000a4c        0x8 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+                0x00000a54                __exidx_end = .
 
-.rel.dyn        0x0000091c        0x0
+.rel.dyn        0x00000a54        0x0
  .rel.iplt      0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
-.ctors          0x0000091c        0x0
-                0x0000091c                __CTOR_LIST__ = .
+.ctors          0x00000a54        0x0
+                0x00000a54                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x0000091c                __CTOR_END__ = .
+                0x00000a54                __CTOR_END__ = .
 
-.dtors          0x0000091c        0x0
-                0x0000091c                __DTOR_LIST__ = .
+.dtors          0x00000a54        0x0
+                0x00000a54                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x0000091c                __DTOR_END__ = .
+                0x00000a54                __DTOR_END__ = .
 
-.preinit_array  0x0000091c        0x0
-                0x0000091c                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x00000a54        0x0
+                0x00000a54                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000091c                PROVIDE (__preinit_array_end, .)
+                0x00000a54                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000091c        0x4
-                0x0000091c                PROVIDE (__init_array_start, .)
+.init_array     0x00000a54        0x4
+                0x00000a54                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x0000091c        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
-                0x00000920                PROVIDE (__init_array_end, .)
+ .init_array    0x00000a54        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+                0x00000a58                PROVIDE (__init_array_end, .)
 
-.fini_array     0x00000920        0x4
-                0x00000920                PROVIDE (__fini_array_start, .)
+.fini_array     0x00000a58        0x4
+                0x00000a58                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x00000920        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
-                0x00000924                PROVIDE (__fini_array_end, .)
-                0x00000924                __etext = .
-                0x00000924                __DATA_ROM = .
+ .fini_array    0x00000a58        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+                0x00000a5c                PROVIDE (__fini_array_end, .)
+                0x00000a5c                __etext = .
+                0x00000a5c                __DATA_ROM = .
 
 .mtb            0x1fffe000        0x0
                 0x1fffe000                . = ALIGN (0x8)
@@ -502,49 +513,54 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
                 0x1fffe000                . = ALIGN (0x8)
                 0x1fffe000                _mtb_end = .
 
-.data           0x1fffe000       0x64 load address 0x00000924
+.data           0x1fffe000       0xa4 load address 0x00000a5c
                 0x1fffe000                . = ALIGN (0x4)
                 0x1fffe000                __DATA_RAM = .
                 0x1fffe000                __data_start__ = .
  *(.data)
  *(.data*)
+ .data.RED_LED  0x1fffe000       0x10 ./Sources/Application_layer/app.o
+ .data.GREEN_LED
+                0x1fffe010       0x10 ./Sources/Application_layer/app.o
+ .data.SW1      0x1fffe020       0x10 ./Sources/Application_layer/app.o
+ .data.SW2      0x1fffe030       0x10 ./Sources/Application_layer/app.o
  .data.impure_data
-                0x1fffe000       0x60 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
+                0x1fffe040       0x60 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-impure.o)
  *(.jcr*)
- .jcr           0x1fffe060        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
- .jcr           0x1fffe060        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
-                0x1fffe064                . = ALIGN (0x4)
-                0x1fffe064                __data_end__ = .
-                0x00000988                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+ .jcr           0x1fffe0a0        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .jcr           0x1fffe0a0        0x4 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtend.o
+                0x1fffe0a4                . = ALIGN (0x4)
+                0x1fffe0a4                __data_end__ = .
+                0x00000b00                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
 
-.igot.plt       0x1fffe064        0x0 load address 0x00000988
+.igot.plt       0x1fffe0a4        0x0 load address 0x00000b00
  .igot.plt      0x00000000        0x0 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
 
-.bss            0x1fffe064       0x1c load address 0x00000988
-                0x1fffe064                . = ALIGN (0x4)
-                0x1fffe064                __START_BSS = .
-                0x1fffe064                __bss_start__ = .
+.bss            0x1fffe0a4       0x1c load address 0x00000b00
+                0x1fffe0a4                . = ALIGN (0x4)
+                0x1fffe0a4                __START_BSS = .
+                0x1fffe0a4                __bss_start__ = .
  *(.bss)
- .bss           0x1fffe064       0x1c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
+ .bss           0x1fffe0a4       0x1c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/crtbegin.o
  *(.bss*)
  *(COMMON)
-                0x1fffe080                . = ALIGN (0x4)
-                0x1fffe080                __bss_end__ = .
-                0x1fffe080                __END_BSS = .
+                0x1fffe0c0                . = ALIGN (0x4)
+                0x1fffe0c0                __bss_end__ = .
+                0x1fffe0c0                __END_BSS = .
 
-.heap           0x1fffe080      0x400 load address 0x000009a4
-                0x1fffe080                . = ALIGN (0x8)
-                0x1fffe080                __end__ = .
-                0x1fffe080                PROVIDE (end, .)
-                0x1fffe080                __HeapBase = .
-                0x1fffe480                . = (. + HEAP_SIZE)
- *fill*         0x1fffe080      0x400 
-                0x1fffe480                __HeapLimit = .
+.heap           0x1fffe0c0      0x400 load address 0x00000b1c
+                0x1fffe0c0                . = ALIGN (0x8)
+                0x1fffe0c0                __end__ = .
+                0x1fffe0c0                PROVIDE (end, .)
+                0x1fffe0c0                __HeapBase = .
+                0x1fffe4c0                . = (. + HEAP_SIZE)
+ *fill*         0x1fffe0c0      0x400 
+                0x1fffe4c0                __HeapLimit = .
 
-.stack          0x1fffe480      0x400 load address 0x00000da4
-                0x1fffe480                . = ALIGN (0x8)
-                0x1fffe880                . = (. + STACK_SIZE)
- *fill*         0x1fffe480      0x400 
+.stack          0x1fffe4c0      0x400 load address 0x00000f1c
+                0x1fffe4c0                . = ALIGN (0x8)
+                0x1fffe8c0                . = (. + STACK_SIZE)
+ *fill*         0x1fffe4c0      0x400 
                 0x20006000                __StackTop = (ORIGIN (m_data) + 0x8000)
                 0x20005c00                __StackLimit = (__StackTop - STACK_SIZE)
                 0x20006000                PROVIDE (__stack, __StackTop)
@@ -591,101 +607,109 @@ LOAD c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv6-m/cr
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data overflowed with stack and heap)
 OUTPUT(NguyenVietHa_MCUASM2.elf elf32-littlearm)
 
-.debug_info     0x00000000      0xf1f
- .debug_info    0x00000000      0x29d ./Sources/HAL_layer/hal_clock.o
- .debug_info    0x0000029d      0x2f7 ./Sources/HAL_layer/hal_gpio.o
- .debug_info    0x00000594      0x1c8 ./Sources/Drivers_layer/Switch/switch.o
- .debug_info    0x0000075c      0x1e2 ./Sources/Drivers_layer/LED/led.o
- .debug_info    0x0000093e       0xdc ./Sources/Application_layer/app.o
- .debug_info    0x00000a1a       0x8c ./Sources/main.o
- .debug_info    0x00000aa6       0x8b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_info    0x00000b31      0x3ee ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_info     0x00000000     0x1300
+ .debug_info    0x00000000      0x339 ./Sources/HAL_layer/hal_clock.o
+ .debug_info    0x00000339      0x2f7 ./Sources/HAL_layer/hal_gpio.o
+ .debug_info    0x00000630      0x219 ./Sources/Drivers_layer/Switch/switch.o
+ .debug_info    0x00000849      0x247 ./Sources/Drivers_layer/LED/led.o
+ .debug_info    0x00000a90      0x36b ./Sources/Application_layer/app.o
+ .debug_info    0x00000dfb       0x8c ./Sources/main.o
+ .debug_info    0x00000e87       0x8b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_info    0x00000f12      0x3ee ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_abbrev   0x00000000      0x4f8
- .debug_abbrev  0x00000000       0xb3 ./Sources/HAL_layer/hal_clock.o
- .debug_abbrev  0x000000b3       0xed ./Sources/HAL_layer/hal_gpio.o
- .debug_abbrev  0x000001a0       0xc4 ./Sources/Drivers_layer/Switch/switch.o
- .debug_abbrev  0x00000264       0xaa ./Sources/Drivers_layer/LED/led.o
- .debug_abbrev  0x0000030e       0x86 ./Sources/Application_layer/app.o
- .debug_abbrev  0x00000394       0x47 ./Sources/main.o
- .debug_abbrev  0x000003db       0x14 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_abbrev  0x000003ef      0x109 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_abbrev   0x00000000      0x663
+ .debug_abbrev  0x00000000       0xe9 ./Sources/HAL_layer/hal_clock.o
+ .debug_abbrev  0x000000e9       0xed ./Sources/HAL_layer/hal_gpio.o
+ .debug_abbrev  0x000001d6       0xed ./Sources/Drivers_layer/Switch/switch.o
+ .debug_abbrev  0x000002c3       0xeb ./Sources/Drivers_layer/LED/led.o
+ .debug_abbrev  0x000003ae      0x151 ./Sources/Application_layer/app.o
+ .debug_abbrev  0x000004ff       0x47 ./Sources/main.o
+ .debug_abbrev  0x00000546       0x14 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_abbrev  0x0000055a      0x109 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_aranges  0x00000000      0x178
+.debug_aranges  0x00000000      0x1b0
  .debug_aranges
                 0x00000000       0x20 ./Sources/HAL_layer/hal_clock.o
  .debug_aranges
                 0x00000020       0x50 ./Sources/HAL_layer/hal_gpio.o
  .debug_aranges
-                0x00000070       0x30 ./Sources/Drivers_layer/Switch/switch.o
+                0x00000070       0x28 ./Sources/Drivers_layer/Switch/switch.o
  .debug_aranges
-                0x000000a0       0x40 ./Sources/Drivers_layer/LED/led.o
+                0x00000098       0x30 ./Sources/Drivers_layer/LED/led.o
  .debug_aranges
-                0x000000e0       0x30 ./Sources/Application_layer/app.o
+                0x000000c8       0x80 ./Sources/Application_layer/app.o
  .debug_aranges
-                0x00000110       0x20 ./Sources/main.o
+                0x00000148       0x20 ./Sources/main.o
  .debug_aranges
-                0x00000130       0x20 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+                0x00000168       0x20 ./Project_Settings/Startup_Code/startup_MKL46Z4.o
  .debug_aranges
-                0x00000150       0x28 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+                0x00000188       0x28 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_ranges   0x00000000       0xe8
+.debug_ranges   0x00000000      0x120
  .debug_ranges  0x00000000       0x10 ./Sources/HAL_layer/hal_clock.o
  .debug_ranges  0x00000010       0x40 ./Sources/HAL_layer/hal_gpio.o
- .debug_ranges  0x00000050       0x20 ./Sources/Drivers_layer/Switch/switch.o
- .debug_ranges  0x00000070       0x30 ./Sources/Drivers_layer/LED/led.o
- .debug_ranges  0x000000a0       0x20 ./Sources/Application_layer/app.o
- .debug_ranges  0x000000c0       0x10 ./Sources/main.o
- .debug_ranges  0x000000d0       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_ranges  0x00000050       0x18 ./Sources/Drivers_layer/Switch/switch.o
+ .debug_ranges  0x00000068       0x20 ./Sources/Drivers_layer/LED/led.o
+ .debug_ranges  0x00000088       0x70 ./Sources/Application_layer/app.o
+ .debug_ranges  0x000000f8       0x10 ./Sources/main.o
+ .debug_ranges  0x00000108       0x18 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_macro    0x00000000     0xe4c4
- .debug_macro   0x00000000       0x8d ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000008d      0x802 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000088f       0x16 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x000008a5       0x16 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x000008bb       0x44 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x000008ff      0x209 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000b08       0x3a ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000b42       0x3a ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000b7c       0x26 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000ba2      0x306 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000ea8       0x6b ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x00000f13     0xd132 ./Sources/HAL_layer/hal_clock.o
- .debug_macro   0x0000e045       0x8d ./Sources/HAL_layer/hal_gpio.o
- .debug_macro   0x0000e0d2       0xaa ./Sources/Drivers_layer/Switch/switch.o
- .debug_macro   0x0000e17c       0x1c ./Sources/Drivers_layer/Switch/switch.o
- .debug_macro   0x0000e198       0xaa ./Sources/Drivers_layer/LED/led.o
- .debug_macro   0x0000e242       0x1c ./Sources/Drivers_layer/LED/led.o
- .debug_macro   0x0000e25e       0xbd ./Sources/Application_layer/app.o
- .debug_macro   0x0000e31b       0x22 ./Sources/Application_layer/app.o
- .debug_macro   0x0000e33d       0xbd ./Sources/main.o
- .debug_macro   0x0000e3fa       0x7e ./Project_Settings/Startup_Code/system_MKL46Z4.o
- .debug_macro   0x0000e478       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_macro    0x00000000     0xecac
+ .debug_macro   0x00000000      0x135 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000135      0x802 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000937       0x16 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000094d       0x16 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000963       0x44 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x000009a7      0x209 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000bb0       0x3a ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000bea       0x3a ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000c24       0x26 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000c4a      0x306 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000f50       0x6b ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x00000fbb     0xd132 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e0ed       0x58 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e145       0x35 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e17a       0xa3 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e21d      0x166 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e383       0x52 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e3d5       0x16 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e3eb       0x43 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e42e      0x180 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e5ae      0x2a6 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e854       0x10 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e864       0x35 ./Sources/HAL_layer/hal_clock.o
+ .debug_macro   0x0000e899       0x8d ./Sources/HAL_layer/hal_gpio.o
+ .debug_macro   0x0000e926       0xa5 ./Sources/Drivers_layer/Switch/switch.o
+ .debug_macro   0x0000e9cb       0xa5 ./Sources/Drivers_layer/LED/led.o
+ .debug_macro   0x0000ea70       0xb9 ./Sources/Application_layer/app.o
+ .debug_macro   0x0000eb29       0xb9 ./Sources/main.o
+ .debug_macro   0x0000ebe2       0x7e ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_macro   0x0000ec60       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_line     0x00000000     0x1199
- .debug_line    0x00000000      0x20a ./Sources/HAL_layer/hal_clock.o
- .debug_line    0x0000020a      0x272 ./Sources/HAL_layer/hal_gpio.o
- .debug_line    0x0000047c      0x271 ./Sources/Drivers_layer/Switch/switch.o
- .debug_line    0x000006ed      0x288 ./Sources/Drivers_layer/LED/led.o
- .debug_line    0x00000975      0x2de ./Sources/Application_layer/app.o
- .debug_line    0x00000c53      0x28b ./Sources/main.o
- .debug_line    0x00000ede       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
- .debug_line    0x00000f59      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+.debug_line     0x00000000     0x12f6
+ .debug_line    0x00000000      0x2e7 ./Sources/HAL_layer/hal_clock.o
+ .debug_line    0x000002e7      0x272 ./Sources/HAL_layer/hal_gpio.o
+ .debug_line    0x00000559      0x25e ./Sources/Drivers_layer/Switch/switch.o
+ .debug_line    0x000007b7      0x263 ./Sources/Drivers_layer/LED/led.o
+ .debug_line    0x00000a1a      0x396 ./Sources/Application_layer/app.o
+ .debug_line    0x00000db0      0x28b ./Sources/main.o
+ .debug_line    0x0000103b       0x7b ./Project_Settings/Startup_Code/startup_MKL46Z4.o
+ .debug_line    0x000010b6      0x240 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_str      0x00000000    0x4f4b6
- .debug_str     0x00000000    0x4f0e3 ./Sources/HAL_layer/hal_clock.o
-                              0x4f4e8 (size before relaxing)
- .debug_str     0x0004f0e3      0x120 ./Sources/HAL_layer/hal_gpio.o
+.debug_str      0x00000000    0x518ed
+ .debug_str     0x00000000    0x51555 ./Sources/HAL_layer/hal_clock.o
+                              0x519df (size before relaxing)
+ .debug_str     0x00051555      0x105 ./Sources/HAL_layer/hal_gpio.o
                               0x4f4f1 (size before relaxing)
- .debug_str     0x0004f203       0xc8 ./Sources/Drivers_layer/Switch/switch.o
-                              0x4f518 (size before relaxing)
- .debug_str     0x0004f2cb       0xd3 ./Sources/Drivers_layer/LED/led.o
-                              0x4f523 (size before relaxing)
- .debug_str     0x0004f39e       0x6a ./Sources/Application_layer/app.o
-                              0x4f53e (size before relaxing)
- .debug_str     0x0004f408       0x17 ./Sources/main.o
-                              0x4f4fa (size before relaxing)
- .debug_str     0x0004f41f       0x97 ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_str     0x0005165a       0x7b ./Sources/Drivers_layer/Switch/switch.o
+                              0x4f4d3 (size before relaxing)
+ .debug_str     0x000516d5       0x5e ./Sources/Drivers_layer/LED/led.o
+                              0x4f4c2 (size before relaxing)
+ .debug_str     0x00051733      0x10c ./Sources/Application_layer/app.o
+                              0x4f5b5 (size before relaxing)
+ .debug_str     0x0005183f       0x17 ./Sources/main.o
+                              0x4f462 (size before relaxing)
+ .debug_str     0x00051856       0x97 ./Project_Settings/Startup_Code/system_MKL46Z4.o
                               0x4f537 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -698,15 +722,15 @@ OUTPUT(NguyenVietHa_MCUASM2.elf elf32-littlearm)
  .comment       0x00000000       0x71 ./Sources/main.o
  .comment       0x00000000       0x71 ./Project_Settings/Startup_Code/system_MKL46Z4.o
 
-.debug_frame    0x00000000      0x390
- .debug_frame   0x00000000       0x2c ./Sources/HAL_layer/hal_clock.o
- .debug_frame   0x0000002c       0xf0 ./Sources/HAL_layer/hal_gpio.o
- .debug_frame   0x0000011c       0x64 ./Sources/Drivers_layer/Switch/switch.o
- .debug_frame   0x00000180       0x9c ./Sources/Drivers_layer/LED/led.o
- .debug_frame   0x0000021c       0x68 ./Sources/Application_layer/app.o
- .debug_frame   0x00000284       0x2c ./Sources/main.o
- .debug_frame   0x000002b0       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
- .debug_frame   0x000002fc       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
- .debug_frame   0x00000324       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
- .debug_frame   0x00000350       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
- .debug_frame   0x00000370       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)
+.debug_frame    0x00000000      0x46c
+ .debug_frame   0x00000000       0x30 ./Sources/HAL_layer/hal_clock.o
+ .debug_frame   0x00000030       0xf0 ./Sources/HAL_layer/hal_gpio.o
+ .debug_frame   0x00000120       0x50 ./Sources/Drivers_layer/Switch/switch.o
+ .debug_frame   0x00000170       0x70 ./Sources/Drivers_layer/LED/led.o
+ .debug_frame   0x000001e0      0x180 ./Sources/Application_layer/app.o
+ .debug_frame   0x00000360       0x2c ./Sources/main.o
+ .debug_frame   0x0000038c       0x4c ./Project_Settings/Startup_Code/system_MKL46Z4.o
+ .debug_frame   0x000003d8       0x28 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-exit.o)
+ .debug_frame   0x00000400       0x2c c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-init.o)
+ .debug_frame   0x0000042c       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libg_s.a(lib_a-memset.o)
+ .debug_frame   0x0000044c       0x20 c:/freescale/kds_v3/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv6-m\libnosys.a(_exit.o)

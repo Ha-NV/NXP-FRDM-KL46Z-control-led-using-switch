@@ -19,6 +19,11 @@
 /*******************************************************************************
  * Prototype
  ******************************************************************************/
-void HAL_ClockSetup(void);
+/**
+ * @brief Setup clock for PORTx.
+ *
+ * This function enables the clock for PORTx.
+ */
+void HAL_PORT_EnableClock(PORT_Type *port);
 
 #endif /* INCLUDES_HAL_LAYER_HAL_CLOCK_H_ */

@@ -20,45 +20,18 @@
 /*******************************************************************************
  * Definition
  ******************************************************************************/
-#define RED_LED_PIN_MASK (1<<29)
-#define GREEN_LED_PIN_MASK (1<<5)
-#define RED_LED_PIN (29)
-#define GREEN_LED_PIN (5)
+typedef struct
+{
+	PORT_Type *port;
+	GPIO_Type *gpio;
+	uint32_t pin;
+	uint32_t pinMask;
+} LED_def;
 
-/**
- * @brief Initialize the LEDs.
- *
- * This function initializes the LEDs by setting up the clock and enabling GPIO pins for red and green LEDs.
- * It also configures the pins as output for controlling the LEDs.
- */
-void LED_Init(void);
+void LED_Init(PORT_Type *PORTx, GPIO_Type *GPIOx, uint32_t pin, uint32_t pinMask);
 
-/**
- * @brief Turn on the red LED.
- *
- * This function turns on the red LED by clearing the corresponding GPIO pin.
- */
-void LED_RedOn(void);
+void LED_On(GPIO_Type *GPIOx, uint32_t pinMask);
 
-/**
- * @brief Turn off the red LED.
- *
- * This function turns off the red LED by setting the corresponding GPIO pin.
- */
-void LED_RedOff(void);
-
-/**
- * @brief Turn on the green LED.
- *
- * This function turns on the green LED by clearing the corresponding GPIO pin.
- */
-void LED_GreenOn(void);
-
-/**
- * @brief Turn off the green LED.
- *
- * This function turns off the green LED by setting the corresponding GPIO pin.
- */
-void LED_GreenOff(void);
+void LED_Off(GPIO_Type *GPIOx, uint32_t pinMask);
 
 #endif /* INCLUDES_DRIVERS_LAYER_LED_LED_H_ */

@@ -13,63 +13,24 @@
 /*******************************************************************************
  * Code
  ******************************************************************************/
-/**
- * @brief Initialize the LEDs.
- *
- * This function initializes the LEDs by setting up the clock and enabling GPIO pins for red and green LEDs.
- * It also configures the pins as output for controlling the LEDs.
- */
-void LED_Init(void)
+
+void LED_Init(PORT_Type *PORTx, GPIO_Type *GPIOx, uint32_t pin, uint32_t pinMask)
 {
-	HAL_ClockSetup();
+	HAL_PORT_EnableClock(PORTx);
 
-	/* Enable GPIO for PORTE pin 29 (red led) */
-	HAL_GPIO_EnablePinLED(PORTE, RED_LED_PIN);
-	/* Enable GPIO for PORTD pin 5 (green led) */
-	HAL_GPIO_EnablePinLED(PORTD, GREEN_LED_PIN);
+	/* Enable GPIO */
+	HAL_GPIO_SetMuxPinLED(PORTx, pin);
 
-	/* Set Red led as output */
-	HAL_GPIO_SetAsOutput(GPIOE, RED_LED_PIN_MASK);
-	/* Set Green led as output */
-	HAL_GPIO_SetAsOutput(GPIOD, GREEN_LED_PIN_MASK);
+	/* Set LED as output */
+	HAL_GPIO_SetAsOutput(GPIOx, pinMask);
 }
 
-/**
- * @brief Turn on the red LED.
- *
- * This function turns on the red LED by clearing the corresponding GPIO pin.
- */
-void LED_RedOn(void)
+void LED_On(GPIO_Type *GPIOx, uint32_t pinMask)
 {
-	HAL_GPIO_ClearPin(GPIOE, RED_LED_PIN_MASK);
+	HAL_GPIO_ClearPin(GPIOx, pinMask);
 }
 
-/**
- * @brief Turn off the red LED.
- *
- * This function turns off the red LED by setting the corresponding GPIO pin.
- */
-void LED_RedOff(void)
+void LED_Off(GPIO_Type *GPIOx, uint32_t pinMask)
 {
-	HAL_GPIO_SetPin(GPIOE, RED_LED_PIN_MASK);
-}
-
-/**
- * @brief Turn on the green LED.
- *
- * This function turns on the green LED by clearing the corresponding GPIO pin.
- */
-void LED_GreenOn(void)
-{
-	HAL_GPIO_ClearPin(GPIOD, GREEN_LED_PIN_MASK);
-}
-
-/**
- * @brief Turn off the green LED.
- *
- * This function turns off the green LED by setting the corresponding GPIO pin.
- */
-void LED_GreenOff(void)
-{
-	HAL_GPIO_SetPin(GPIOD, GREEN_LED_PIN_MASK);
+	HAL_GPIO_SetPin(GPIOx, pinMask);
 } /* EOF */

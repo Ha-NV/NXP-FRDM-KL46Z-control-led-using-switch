@@ -28,7 +28,7 @@
  * @param port Pointer to the PORT_Type structure that contains the port registers.
  * @param pin The pin number to be configured.
  */
-void HAL_GPIO_EnablePinLED(PORT_Type *port, uint32_t pin);
+void HAL_GPIO_SetMuxPinLED(PORT_Type *port, uint32_t pin);
 
 /**
  * @brief Enable the GPIO pin for switch usage.
@@ -40,7 +40,7 @@ void HAL_GPIO_EnablePinLED(PORT_Type *port, uint32_t pin);
  * @param port Pointer to the PORT_Type structure that contains the port registers.
  * @param pin The pin number to be configured.
  */
-void HAL_GPIO_EnablePinSwitch(PORT_Type *port, uint32_t pin);
+void HAL_GPIO_SetMuxPinSwitch(PORT_Type *port, uint32_t pin);
 
 /**
  * @brief Set the GPIO pin as an output.
