@@ -9,9 +9,9 @@
 # include <string.h>
 
 /**
- * @brief Setup clock for PORTC, PORTD, and PORTE.
+ * @brief Setup clock for PORTx.
  *
- * This function enables the clock for PORTC, PORTD, and PORTE.
+ * This function enables the clock for PORTx.
  */
 void HAL_PORT_EnableClock(PORT_Type *port)
 {
@@ -31,7 +31,7 @@ void HAL_PORT_EnableClock(PORT_Type *port)
 	{
 		SIM->SCGC5 |= SIM_SCGC5_PORTD_MASK;
 	}
-	else
+	else if (port == PORTE)
 	{
 		SIM->SCGC5 |= SIM_SCGC5_PORTE_MASK;
 	}
